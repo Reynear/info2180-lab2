@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-size: 18px;
   color: #2D3748;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr auto;
@@ -11,6 +11,7 @@ body {
     "header header"
     "main sidebar"
     "footer footer";
+  .meta { color: #718096; }
 }
 
 header {
@@ -31,82 +32,62 @@ header {
   h1 {
     margin-bottom: 0;
     margin-top: 5px;
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   img {
-  margin-top: 20px;
-  width: 100px;
-  display: block;
-  border: 3px solid #333; 
-  border-radius: 50%;
+    margin-top: 20px;
+    width: 100px;
+    display: block;
+    border: 3px solid #333; 
+    border-radius: 50%;
   }
 }
 
+article {
+  margin-left: 5vmin;
+  margin-right: 5vmin;
+  grid-column: main;
+  h2 {
+    font-size: 32px;
+    color: #48BB78;
+  }
+  h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  img {
+    float: right;
+    width: 200px;
+    height: auto;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
 
-
-
-
-
-.blog-content {
-  display: contents;
-  article{
-    margin-left: 5vmin;
-    margin-right: 5vmin;
-    grid-column: 1;
-    img{
-      float: right;
-      width: 200px;
-      height: auto;
-      margin-left: 1rem;
-      margin-bottom: 0.5rem;
+.Sidebar {
+  margin-left: 5vmin;
+  margin-right: 5vmin;
+  grid-area: sidebar;
+  h3 {
+    color: #48BB78;
+  }
+  li { 
+    color: #4299E1;
+  }
+  .about-me {
+    background: #E2E8F0;
+    padding: 1rem;
+    h3 { 
+      color: #000000; 
     }
   }
-  .Sidebar{
-    margin-left: 5vmin;
-    margin-right: 5vmin;
-    grid-column: 2;
-  }
 }
 
-footer{
+footer {
   text-align: center;
-  grid-column: 1/3;
   background: #2C5282;
   color: #FFFFFF;
   grid-area: footer;
 }
 
-/* Grid area placements */
-main { grid-area: main; }
-.Sidebar { grid-area: sidebar; }
 
-/* Header title typography */
-header h1 {
-  font-size: 36px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-/* Blog post titles */
-article h2 {
-  font-size: 32px;
-  color: #48BB78;
-}
-
-/* Date and author line */
-.meta { color: #718096; }
-
-/* Sidebar headings */
-.Sidebar h3 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.about-me h3 { color: #000000; }
-.contact-info h3, .Archives h3 { color: #48BB78; }
-
-/* About section background and padding */
-.about-me {
-  background: #E2E8F0;
-  padding: 1rem;
-}
-
-/* Social and Archive link colors (fallback to li if no anchors) */
-.contact-info a, .Archives a { color: #4299E1; }
-.contact-info li, .Archives li { color: #4299E1; }
